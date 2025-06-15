@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Appuntamenti</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📅 Gestione Appuntamenti</h1>
+            <p class="subtitle">Carica e visualizza i tuoi appuntamenti</p>
+        </header>
+
+        <div class="upload-section">
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-content">
+                    <div class="upload-icon">📁</div>
+                    <h3>Carica file JSON</h3>
+                    <p>Trascina il file qui o clicca per selezionarlo</p>
+                    <input type="file" id="fileInput" accept=".json" hidden>
+                    <button class="upload-btn" id="uploadBtn">Seleziona File</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="appointments-section" id="appointmentsSection" style="display: none;">
+            <div class="section-header">
+                <h2>I tuoi Appuntamenti</h2>
+                <div class="stats" id="stats"></div>
+            </div>
+            <div class="appointments-grid" id="appointmentsGrid"></div>
+        </div>
+
+        <div class="unconfirmed-section" id="unconfirmedSection" style="display: none;">
+            <div class="section-header">
+                <h2>Appuntamenti da Confermare</h2>
+            </div>
+            <div class="appointments-grid" id="unconfirmedGrid"></div>
+        </div>
+
+        <div class="error-message" id="errorMessage" style="display: none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

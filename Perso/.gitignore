@@ -1,0 +1,8 @@
+# Ignora la cartella __pycache__ in qualsiasi directory
+__pycache__/
+**/__pycache__/
+
+# Ignora tutti i file .pkl
+*.pkl
+*.onnx
+*.csv

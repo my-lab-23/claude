@@ -1,0 +1,11 @@
+=== INFORMAZIONI MODELLO ===
+Tipo modello: LogisticRegression
+Classi: ['Extrovert', 'Introvert']
+Numero classi: 2
+
+=== CODICE KOTLIN ===
+// Aggiorna questa lista nel codice Kotlin:
+private var classLabels: List<String> = listOf(
+    "Extrovert",
+    "Introvert"
+)

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsione Affollamento Autobus</title>
+    <link rel="stylesheet" href="bp/bp.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚌 Previsione Affollamento Autobus</h1>
+        
+        <div class="upload-section">
+            <h3>📂 Carica Dati Storici</h3>
+            <div class="file-input-wrapper">
+                <input type="file" id="jsonFile" class="file-input" accept=".json">
+                <div class="file-input-button">Seleziona file JSON</div>
+            </div>
+            <div id="fileStatus"></div>
+        </div>
+        
+        <div class="prediction-section">
+            <h3>🔮 Parametri Previsione</h3>
+            
+            <div class="input-group">
+                <label for="targetDate">Data per la previsione:</label>
+                <input type="date" id="targetDate">
+            </div>
+            
+            <div class="input-group">
+                <label for="temperature">Temperatura prevista (°C):</label>
+                <input type="number" id="temperature" value="20" step="0.1" min="-20" max="50">
+            </div>
+            
+            <div class="input-group">
+                <label for="direction">Direzione:</label>
+                <select id="direction" required>
+                    <option value="">Seleziona direzione</option>
+                    <option value="ANDATA">🚌 Andata</option>
+                    <option value="RITORNO">🏠 Ritorno</option>
+                </select>
+            </div>
+            
+            <button id="predictButton" onclick="makePrediction()" disabled>
+                Calcola Previsione
+            </button>
+        </div>
+        
+        <div id="results"></div>
+        
+        <div class="info">
+            <strong>ℹ️ Come funziona:</strong><br>
+            L'algoritmo analizza i dati storici dando priorità ai dati dello stesso giorno della settimana e della stessa direzione.
+            Utilizza una regressione lineare che considera sia la temperatura che il giorno della settimana per fare la previsione.
+            I livelli di affollamento vanno da 1 (vuoto) a 5 (strapieno).
+        </div>
+    </div>
+
+    <script src="bp/bp.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisi Affollamento Bus</title>
+    <link rel="stylesheet" href="bdw/bdw.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚌 Analisi Affollamento Bus</h1>
+            <p>Visualizza i dati di affollamento con le temperature giornaliere</p>
+        </div>
+
+        <div class="upload-section">
+            <label for="fileInput" class="file-input-wrapper">
+                <input type="file" id="fileInput" accept=".json" />
+                <span>📁 Carica File JSON</span>
+            </label>
+        </div>
+
+        <div id="statsSection" class="stats-grid" style="display: none;">
+            <div class="stat-card">
+                <div class="stat-number" id="totalRecords">0</div>
+                <div class="stat-label">Totale Rilevazioni</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="uniqueDays">0</div>
+                <div class="stat-label">Giorni Monitorati</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="avgCrowding">0</div>
+                <div class="stat-label">Affollamento Medio</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="avgTemp">0°C</div>
+                <div class="stat-label">Temperatura Media</div>
+            </div>
+        </div>
+
+        <div class="data-section">
+            <div id="noData" class="no-data">
+                <div class="no-data-icon">📊</div>
+                <h3>Carica un file JSON per visualizzare i dati</h3>
+                <p>Seleziona il file delle annotazioni bus con le temperature</p>
+            </div>
+            
+            <div id="dataContent" style="display: none;">
+                <h2 class="section-title">Dettaglio Rilevazioni</h2>
+                <div id="dataGrid" class="data-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bdw/bdw.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+*.html linguist-vendored
+*.css linguist-vendored
+
+*.bat linguist-vendored
+
+*.java linguist-vendored
+*.sh linguist-vendored
+*.rb linguist-vendored
+*.mjs linguist-vendored
+*.hbs linguist-vendored
+
+gradlew linguist-vendored
+gradlew_* linguist-vendored
